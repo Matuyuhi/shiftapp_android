@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ShiftApp</string>
+    <string name="hello">hello</string>
+    <string name="password">password</string>
+    <string name="login">Log in</string>
+    <string name="shift">Shift</string>
+    <string name="user">User</string>
+    <string name="miss">Miss</string>
+    <string name="profile">Profile</string>
+    <string name="reloadbutton">reloadButton</string>
+    <string name="tabmenu">タブメニュー</string>
+    <string name="username">username</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="sign_up">Sign UP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="date">date</string>
+    <string name="time">time</string>
+    <string name="date_name">日付</string>
+    <string name="inTime">開始時刻</string>
+    <string name="outTime">終了時刻</string>
+    <string name="comment_name">備考</string>
+</resources>

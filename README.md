@@ -1,2 +1,3 @@
 # shiftapp_android
-shiftappのandroid版アプリ
+android版shiftアプリのデモ版
+

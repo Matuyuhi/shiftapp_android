@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_ShiftView"
+        android:icon="@drawable/baseline_home_24"
+        android:title="@string/shift">
+    </item>
+    <item
+        android:id="@+id/navigation_UserView"
+        android:icon="@drawable/baseline_format_list_bulleted_24"
+        android:title="@string/user" >
+    </item>
+    <item
+        android:id="@+id/navigation_MissView"
+        android:icon="@drawable/baseline_sentiment_very_dissatisfied_48"
+        android:title="@string/miss" >
+
+    </item>
+    <item
+        android:id="@+id/navigation_ProfileView"
+        android:title="@string/profile" >
+
+    </item>
+</menu>

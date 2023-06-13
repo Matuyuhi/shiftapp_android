@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    // crashlytics
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    namespace 'com.matuyuhi.shiftapp'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.matuyuhi.shiftapp"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    // binding
+    viewBinding {
+        enabled = true
+    }
+    buildFeatures {
+        viewBinding true
+//        compose true
+    }
+    // vectorDrawblesのサポート
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+    }
+
+}
+// crashlytics
+apply plugin: 'com.google.firebase.crashlytics'
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    // google firebase
+    implementation 'com.google.firebase:firebase-analytics-ktx:21.2.1'
+    // crashlytics
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.6'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // Datastore
+//    implementation "androidx.datastore:datastore-core:1.0.0"
+//    implementation "androidx.datastore:datastore-preferences:1.0.0"
+
+    // Material Components
+    implementation 'com.google.android.material:material:1.8.0'
+    // Data Binding
+    implementation 'androidx.databinding:databinding-runtime:7.4.2'
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'androidx.fragment:fragment:1.5.6'
+
+    // material compose
+//    implementation 'androidx.compose.ui:ui:1.4.0'
+//    implementation 'androidx.compose.material:material:1.4.0'
+}

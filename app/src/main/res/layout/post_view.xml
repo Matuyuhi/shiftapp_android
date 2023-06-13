@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shiftpostview"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:elevation="10dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent" >
+    <View
+        android:id="@+id/SafeArea"
+        android:layout_height="130dp"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/SafeArea"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="30dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/primary_background">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/nowTimeView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="30dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintWidth_percent="0.8"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/datetext"
+                        android:layout_weight="1.0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:text="@string/date"
+                        android:autoSizeTextType="uniform"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/timetext"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.6"
+                        android:background="@color/white"
+                        android:text="time"
+                        android:autoSizeTextType="uniform"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        tools:ignore="NotSibling" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/shiftinfoview"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintWidth_percent="0.8"
+                app:layout_constraintTop_toBottomOf="@id/nowTimeView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <!--        シフト日時入力-->
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="match_parent"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="日付"
+                            android:textSize="20dp"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold" />
+
+
+                        <EditText
+                            android:id="@+id/dateedit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="40dp"
+                            android:background="#00000000"
+                            android:focusableInTouchMode="false"
+                            android:hint="date"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:background="@color/primary_background"/>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <!--        開始時刻入力-->
+                        <TextView
+                            android:id="@+id/intimetext"
+                            android:layout_width="90dp"
+                            android:layout_height="match_parent"
+                            android:text="開始時刻"
+                            android:textSize="20dp"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:autoSizeTextType="uniform"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            tools:ignore="MissingConstraints" />
+
+                        <EditText
+                            android:id="@+id/intimeedit"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:focusableInTouchMode="false"
+                            android:hint="intime"
+                            android:background="#00000000"
+                            tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+                        <Switch
+                            android:id="@+id/intimeswitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.1"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <!--終了時刻入力-->
+                        <TextView
+                            android:id="@+id/outtimetext"
+                            android:layout_width="90dp"
+                            android:layout_height="match_parent"
+                            android:text="終了時刻"
+                            android:textSize="20dp"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:autoSizeTextType="uniform"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            tools:ignore="MissingConstraints" />
+
+                        <EditText
+                            android:id="@+id/outtimeedit"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:focusableInTouchMode="false"
+                            android:hint="outtime"
+                            android:background="#00000000"
+                            tools:ignore="MissingConstraints,TouchTargetSizeCheck">
+
+                        </EditText>
+
+                        <Switch
+                            android:id="@+id/outtimeswitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.1"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            tools:ignore="UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+            <!--コメント蘭-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/commentview"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="10dp"
+                android:background="@color/white"
+                app:layout_constraintWidth_percent="0.8"
+                app:layout_constraintTop_toBottomOf="@id/shiftinfoview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:text="備考"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:autoSizeTextType="uniform"
+                        android:layout_weight="2"
+                        tools:ignore="TextSizeCheck" />
+                    <EditText
+                        android:id="@+id/commentedit"
+                        android:background="#00000000"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/app_name"
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:padding="0dp"
+                android:text="キャンセル"
+                android:textSize="0dp"
+                android:autoSizeTextType="uniform"
+                android:textColor="@color/button_tintcolor"
+                android:background="#00000000"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/commentview"
+                app:layout_constraintTop_toBottomOf="@+id/commentview"
+
+
+                />
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:padding="0dp"
+                android:text="登録"
+                android:textSize="0dp"
+                android:autoSizeTextType="uniform"
+                android:textColor="@color/button_tintcolor"
+                android:background="#00000000"
+                app:layout_constraintEnd_toEndOf="@+id/commentview"
+                app:layout_constraintTop_toBottomOf="@+id/commentview"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
