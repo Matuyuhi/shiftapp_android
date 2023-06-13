@@ -1,0 +1,2 @@
+# shiftapp_android
+shiftappのandroid版アプリ
